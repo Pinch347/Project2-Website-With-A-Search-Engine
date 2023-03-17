@@ -11,5 +11,10 @@ searchForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const query = searchInput.value.trim();
     const limit = parseInt(resultsInput.value);
-    
+    if (query && limit && limit > 0 && limit <= 50) {
+        // code goes here
+      } else {
+        alert("Please enter a valid number of results between 1 and 50.");
+      }
+      
   
