@@ -20,28 +20,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function fetchGifs(query, limit) {
         const url = apiUrl + encodeURIComponent(limit) + "&q=" + encodeURIComponent(query);
-      
+
         fetch(url)
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Failed to fetch GIFs");
-            }
-            return response.json();
-          })
-          .then((data) => {
-            displayGifs(data.data);
-          })
-          .catch((error) => {
-            console.error(error);
-          });
-      }
-      
-      function displayGifs(gifs) {
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Failed to fetch GIFs");
+                }
+                return response.json();
+            })
+            .then((data) => {
+                displayGifs(data.data);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    }
+
+    function displayGifs(gifs) {
         giphyResults.innerHTML = "";
         gifs.forEach((gif) => {
-          const img = document.createElement("img");
-          img.src = gif.images.fixed_width_small.url;
-          giphyResults.appendChild(img);
+            const img = document.createElement("img");
+            img.src = gif.images.fixed_width_small.url;
+            giphyResults.appendChild(img);
         });
-      }
-      
+    }
+});
