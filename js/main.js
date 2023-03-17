@@ -9,5 +9,7 @@ let apiUrl = "https://api.giphy.com/v1/gifs/search?api_key=" + apiKey + "&limit=
 
 searchForm.addEventListener("submit", (event) => {
     event.preventDefault();
-
+    const query = searchInput.value.trim();
+    const limit = parseInt(resultsInput.value);
+    
   
