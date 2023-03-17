@@ -12,3 +12,18 @@ body {
   background-color: #f8f8f8;
   color: #333;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #4285f4;
+    color: #fff;
+  }
+  
+  .site-title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
