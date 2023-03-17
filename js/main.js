@@ -17,3 +17,22 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Please enter a valid number of results between 1 and 50.");
         }
     });
+
+    function fetchGifs(query, limit) {
+        const url = apiUrl + encodeURIComponent(limit) + "&q=" + encodeURIComponent(query);
+      
+        fetch(url)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Failed to fetch GIFs");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            displayGifs(data.data);
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      }
+      
