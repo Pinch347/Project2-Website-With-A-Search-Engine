@@ -36,3 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
           });
       }
       
+      function displayGifs(gifs) {
+        giphyResults.innerHTML = "";
+        gifs.forEach((gif) => {
+          const img = document.createElement("img");
+          img.src = gif.images.fixed_width_small.url;
+          giphyResults.appendChild(img);
+        });
+      }
+      
