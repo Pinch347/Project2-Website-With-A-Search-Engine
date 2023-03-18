@@ -1,0 +1,11 @@
+Title: Search and retrieve GIFs
+
+As a user,
+I want to input a search query and submit it,
+So that I can retrieve relevant GIFs from Giphy.
+
+Acceptance Criteria:
+- User can type a search query into the search input field
+- User can submit the search query by clicking the submit button or pressing Enter
+- The application queries the Giphy API with the user's search query
+- Relevant GIFs are retrieved and displayed on the page
