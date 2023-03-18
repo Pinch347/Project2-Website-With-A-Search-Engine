@@ -1,0 +1,10 @@
+Title: Responsive design for mobile and desktop
+
+As a user,
+I want the website to be responsive,
+So that it works well and looks good on both desktop and mobile devices.
+
+Acceptance Criteria:
+- The website adjusts its layout based on the screen size (desktop or mobile)
+- On mobile devices, the site title, navbar, and images stack vertically
+- On desktop devices, the site title and navbar align to the sides of the header
